@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -61,6 +63,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .fab{
+                font-size: 30px;
+                color: green;
+                margin-left: 20px;
+            }
         </style>
     </head>
     <body>
@@ -79,21 +87,40 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Disparo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Gabriel Granado</td>
+                        <td class="telefone">(21)98622-9680</td>
+                        <td><i id="icone" class="fab fa-whatsapp-square"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Paulo Vitor</td>
+                        <td class="telefone">(21)99882-2524</td>
+                        <td><i class="fab fa-whatsapp-square"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Lucas Leal</td>
+                        <td class="telefone">(21)99455-3003</td>
+                        <td><i class="fab fa-whatsapp-square"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </body>
 </html>
+
+<script src="{{ elixir("js/api_whatsapp.js") }}" type="text/javascript"></script>
