@@ -24,7 +24,9 @@ export default class Api_whatsapp {
          telefone = telefone.replace(')','')
          telefone = telefone.replace('-','').trim()
         console.log(telefone)
-        window.open("https://api.whatsapp.com/send?phone=" + 55+telefone + "&text=" + "Testando Api do whatsapp no Jquery", "_blank");
+        // window.open("https://api.whatsapp.com/send?phone=" + 55+telefone);
+        window.open('https://web.whatsapp.com/send?phone=55%3Cfont+style%3D%22verticalalign%3A+inherit%3B%22%3E%3Cfont+style%3D%22vertical-align%3A+inherit%3B%22%3E' + telefone + '%3C%2Ffont%3E%3C%2Ffont%3E&text=Testando Api do whatsapp');
+
     }
 }
 
