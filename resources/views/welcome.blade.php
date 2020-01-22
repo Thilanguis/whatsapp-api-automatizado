@@ -91,31 +91,19 @@
                 <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Telefone</th>
                         <th scope="col">Disparo</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Gabriel Granado</td>
-                        <td class="telefone">(21)98622-9680</td>
-                        <td><i id="icone" class="fab fa-whatsapp-square"></i></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Paulo Vitor</td>
-                        <td class="telefone">(21)99882-2524</td>
-                        <td><i class="fab fa-whatsapp-square"></i></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Lucas Leal</td>
-                        <td class="telefone">(21)99455-3003</td>
-                        <td><i class="fab fa-whatsapp-square"></i></td>
-                      </tr>
+                        @foreach (config('politicos.parlamentares') as $key => $politico)
+                            <tr></tr>
+                                <td>{{$key}}</td>
+                                <td class="telefone">{{$politico}}</td>
+                                <td><i id="icone" class="fab fa-whatsapp-square"></i></td>
+                            </tr>
+                        @endforeach
                     </tbody>
                   </table>
             </div>
